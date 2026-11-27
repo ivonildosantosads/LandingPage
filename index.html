@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Site em manutenção</title>
+<meta name="theme-color" content="#1d5fd1">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231d5fd1'/%3E%3Ccircle cx='12' cy='12' r='7.5' fill='none' stroke='white' stroke-width='3' stroke-dasharray='2.945 2.945'/%3E%3Ccircle cx='12' cy='12' r='5.5' fill='white'/%3E%3Ccircle cx='12' cy='12' r='2.2' fill='%231d5fd1'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#eef4fb; --ink:#0d2340; --muted:#4a6280; --accent:#1d5fd1; --accent-ink:#ffffff; --line:#cddbed; --wa:#128c4a; --wa-ink:#ffffff;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--wa:#25d366; --wa-ink:#052e14; --bg:#0b1626; --ink:#e8f0fc; --muted:#93a8c6; --accent:#4d9bff; --accent-ink:#04152e; --line:#1f3350;}
+}
+:root[data-theme="dark"]{--wa:#25d366; --wa-ink:#052e14; --bg:#0b1626; --ink:#e8f0fc; --muted:#93a8c6; --accent:#4d9bff; --accent-ink:#04152e; --line:#1f3350;}
+*{box-sizing:border-box}
+html{height:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;min-height:100%;min-height:100dvh;background:var(--bg);color:var(--ink);
+  font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  display:grid;place-items:center;padding:clamp(16px,5vw,48px);overflow-wrap:anywhere}
+main{max-width:min(640px,100%);width:100%}
+.gear{width:clamp(56px,14vw,96px);height:clamp(56px,14vw,96px);color:var(--accent);margin-bottom:clamp(16px,4vw,32px)}
+.gear svg{width:100%;height:100%;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+h1{font-size:clamp(1.75rem,7vw + .25rem,3.5rem);line-height:1.1;margin:0 0 16px;font-weight:700;letter-spacing:-.02em}
+p{font-size:clamp(1rem,2.4vw + .5rem,1.25rem);line-height:1.6;color:var(--muted);margin:0 0 clamp(20px,4vw,36px);max-width:46ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;gap:12px;-webkit-tap-highlight-color:transparent;background:var(--wa);color:var(--wa-ink);
+  text-decoration:none;font-weight:600;font-size:1.05rem;padding:16px 26px;border-radius:999px;
+  transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn svg{width:24px;height:24px;fill:currentColor}
+.num{margin-top:18px;font-size:.95rem;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
+@media (max-width:480px){
+  body{place-items:start center;padding-top:clamp(32px,12vh,96px)}
+  .btn{display:flex;width:100%;padding:16px 20px}
+}
+@media (max-height:480px) and (orientation:landscape){
+  body{place-items:center}
+  .gear{width:44px;height:44px;margin-bottom:10px}
+  h1{font-size:1.6rem;margin-bottom:8px}
+  p{margin-bottom:16px}
+  .num{margin-top:12px;padding-top:12px}
+}
+@media (min-width:1400px){
+  main{max-width:760px}
+}
+@media (prefers-reduced-motion: reduce){.gear svg{animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <div class="gear" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="3.2"/>
+      <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1.11-1.56 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.56-1.11 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34h.01a1.7 1.7 0 0 0 1.03-1.56V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1.03 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.01a1.7 1.7 0 0 0 1.56 1.03H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.56 1.03z"/>
+    </svg>
+  </div>
+  <h1>Estamos em manutenção</h1>
+  <p>Estamos fazendo melhorias no site e voltamos em breve. Se precisar de ajuda agora, fale comigo direto pelo WhatsApp.</p>
+  <a class="btn" href="https://wa.me/5588996963375?text=Ol%C3%A1!%20Vi%20que%20o%20site%20est%C3%A1%20em%20manuten%C3%A7%C3%A3o%20e%20gostaria%20de%20falar%20com%20voc%C3%AA." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.6a11.9 11.9 0 0 0 5.7 1.5c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.5zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.9 9.9 0 1 1 8.3 4.6zm5.4-7.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2.1-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7c0 1.600 1.200 3.200 1.300 3.400s2.300 3.500 5.600 4.900c2 .9 2.800.9 3.800.8.600-.1 1.800-.7 2-1.400s.3-1.300.2-1.400-.3-.2-.6-.3z"/></svg>
+    Chamar no WhatsApp
+  </a>
+  <div class="num">WhatsApp: +55 88 99696-3375</div>
+</main>
+</body>
+</html>
